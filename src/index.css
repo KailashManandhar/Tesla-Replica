@@ -1,0 +1,820 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+button{
+  cursor: pointer;
+}
+header{
+  position: fixed;
+  display: flex;
+  background-color: white;
+  height: 56px;
+  z-index: 10;
+  top: 0;
+}
+body{
+  margin: 0;
+}
+
+
+nav{
+  
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+}
+
+.center-elements{
+  display: flex;
+  justify-content: space-between;
+  width: 489px;
+}
+.center-elements h4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+}
+.center-elements h4:hover{
+  cursor: pointer;
+  background-color: #F2F2F2;
+}
+
+.teslaLogo{ 
+  max-height: 50%;
+  width:  auto;
+ 
+  border: 2px solids;
+  
+  margin-left: 40px;
+}
+
+.end-elements{
+  margin: 10px 30px;
+}
+
+.end-elements a img{
+  width: 40px;
+  height: 40px;
+}
+.home-image-container {
+  height: 80vh;
+  width: 100%;
+  position: relative; /* Crucial: establishes a bounding box for the absolute images */
+  cursor: pointer;
+  margin-top: 56px;
+}
+
+/* Base style for both images */
+.home-image-container .fade-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+  /* The magic: hide by default and animate the opacity change */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+/* The class that brings the current image into view */
+.home-image-container .fade-img.active {
+  opacity: 1;
+}
+
+.home-image-container .image-text{
+  position: absolute;
+  z-index: 10;
+  top: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: #F2F2F2;
+}
+
+.home-image-container .image-text.active{
+  opacity: 1;
+}
+
+.selfDriving-container{
+  background-color: #F4F4F4;
+  width: 95vw;
+  height: 50vh;
+  margin: 40px 35px;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selfDriving-container video{
+  width: 60%;
+  height: auto;
+}
+
+.selfDriving-text{
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.selfDriving-text-subContainer{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+}
+
+.selfDriving-text{
+  margin: 50px;
+}
+
+.selfDriving-buttons{
+  margin: 50px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.selfDriving-buttons button{
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.black-btn{
+  background-color: black;
+  color: white;
+}
+.white-btn{
+  background-color: white;
+  color: black;
+}
+
+.card-container{
+  display: flex;
+  height: 590px;
+  margin: 35px;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.card{
+  position: relative;
+
+}
+
+.card img{
+  width: 1100px ;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 10px;
+  
+}
+
+.card-text{
+  position: absolute;
+  top: 400px;
+  left: 40px;
+  right: 70px;
+  bottom: 30px;
+  color: white;
+}
+
+.carName{
+  font-size: 45px;
+  margin: 0;
+}
+.btn-grp{
+  display: flex;
+  gap: 10px;
+}
+
+.btn-grp button{
+  width: 150px;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+}
+.blue-btn{
+  background-color: #3E6AE1;
+  color: white;
+}
+
+.btn-grp button:hover{
+  filter: brightness(.9);
+}
+
+.learnMore-btn{
+  background-color: white;
+  color: black;
+}
+
+.offers-cotainer{
+  display: flex;
+  margin: 20px 30px;
+  
+  
+  background-color: white;
+}
+
+.offer-card{
+  display: flex;
+  background-color: #F4F4F4;
+  margin-right: 20px;
+  height: 220px;
+  width: 760px;
+  border-radius: 5px;
+}
+
+.offer-card img{
+  height: 250px;
+  width: auto;
+  object-fit: cover;
+}
+
+.map-container{
+  margin: 30px 30px;
+  border-radius: 10px;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  gap: 30px;
+}
+
+footer button{
+  border: none;
+  background-color: white;
+  color: rgb(92, 94, 98);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hoverIn{
+  background-color: #3E6AE1;
+}
+
+.hoverOut{
+  background-color: aquamarine;
+}
+
+/* Header container needs relative position to absolute anchor the tray */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  z-index: 100;
+}
+
+/* The actual navbar dimensions */
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 40px;
+  background-color: transparent;
+}
+
+/* Dropdown Container Tray */
+.dropdown-tray {
+  position: absolute;
+  top: 56px; /* Sits perfectly right under the navbar */
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  
+  /* Slide & fade transitions */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* When active menu matches state */
+.dropdown-tray.open {
+  max-height: 500px; /* Adjust to fit content depth */
+  opacity: 1;
+}
+
+/* Internal Layout for Vehicles Menu Content */
+.mega-menu-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items wide */
+  gap: 30px;
+  flex: 3;
+}
+
+.menu-car-card {
+  text-align: center;
+}
+
+.menu-car-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card-links a {
+  margin: 0 8px;
+  font-size: 13px;
+  color: #5c5e62;
+  text-decoration: underline;
+}
+
+/* Vertical separator line */
+.menu-divider {
+  width: 1px;
+  background-color: #e2e8f0;
+  margin: 0 40px;
+}
+
+/* Sidebar List links layout */
+.side-links-list {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-links-list li {
+  margin-bottom: 12px;
+}
+
+.side-links-list a {
+  text-decoration: none;
+  color: #171a20;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.side-links-list a:hover {
+  text-decoration: underline;
+}
+
+.order-car-container{
+  margin: 100px 30px;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  
+}
+
+.order-car-container img{
+  height: 70vh;
+  width: auto;
+  position: fixed;
+}
+
+.left-order-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 130px;
+}
+
+.stats{
+  display: flex;
+  /* border: 2px solid; */
+}
+
+.stat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.stat h3, h5{
+  margin: 0 5px;
+}
+
+.stat h5{
+  font-size: 10px;
+  color: rgb(57, 60, 65);
+}
+
+.wheel-drive{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgb(57, 60, 65);
+  border-radius: 5px;
+}
+
+.wheel-drive.active{
+  background-color: #F2F2F2;
+  border: 2px solid;
+}
+
+#cyber-logo{
+  width: 170px;
+  height: 58px;
+  
+}
+
+.contact-container{
+  margin: 200px 300px 50px;
+  
+}
+
+.left-contact{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-subHeading{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact-sm-txt{
+  font-size: 14px;
+  color: #393C41;
+}
+
+.info-txt{
+  display: flex;
+  gap: 20px;
+}
+
+.location-container{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 20px;
+}
+
+.location{
+  width: 450px;
+  height: 350px;
+  padding: 0;
+  
+  /* border: 2px solid; */
+  overflow: hidden;
+}
+
+.location img{
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
+}
+
+.banner{
+  width: 100%;
+  height: 50%;
+}
+
+.blog-block{
+  width: 700px;
+  margin: 50px 500px 0 300px;
+  height: 200px;
+  /* border: 2px solid; */
+}
+
+.about-us-container{
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-container video{
+ width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+header.trans-navbar{
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  
+}
+
+.fade-image-container {
+  width: 100%;
+  height: 500px; 
+  
+  background-image: 
+    /* 1. Top White Fade (Kept exactly as you liked it) */
+    linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
+    
+    /* 2. Enhanced Bottom Dark Fade */
+    linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 60%),
+    
+    url('./assets/fading_image.png');
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.random-txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 130px 400px;
+  
+}
+
+.random-txt h1,p,button{
+  margin-top: 20px ;
+
+}
+
+.random-txt button{
+  background-color: white;
+  padding: 10px 60px;
+  border: 3px solid black;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.random-txt button:hover{
+  background-color: black;
+  color: white;
+  
+}
+
+.black-background-container{
+  width: 100%;
+  background-color: black;
+  height: auto;
+}
+
+.leftTitle_rightText{
+  margin: 0 250px 50px;
+  color: white;
+  /* border: 2px solid white; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftTitle_rightText p{
+  width: 700px;
+}
+
+.changing-img{
+ margin: 0 250px 20px;
+ position: relative;
+ overflow: hidden;
+ height: 400px;
+ width: 1100px;
+}
+
+.changing-img img{
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.changing-img img.active{
+  opacity: 1;
+}
+
+.clicking-container{
+  width: 900px;
+  height: 100px;
+  margin: 20px 350px 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clicker{
+  width: 250px;
+  height: 100px;
+  border-top: 2px solid #666666;
+  cursor: pointer;
+  margin: 10px;
+  color: #666666;
+}
+
+.clicker.active{
+  color: white;
+  border-top: 2px solid white;
+}
+
+
+.aboutus-img{
+  height: 85vh;
+  width: 1100px;
+  border-radius: 5px;
+  object-fit: cover;
+ margin: 0 250px 20px;
+
+}
+
+
+.bottom-btn{
+  background-color: black;
+  padding: 10px 60px;
+  border: 3px solid white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+.bottom-btn:hover{
+  background-color: white;
+  color: black;
+  
+}
+
+/* 1. Add the dot here */
+.discover-links-list {
+  display: flex;
+  /* border: 2px solid black; */
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none; /* Optional: removes the default bullet points */
+  padding: 0;       /* Optional: clears out default list indentation */
+}
+
+/* 2. Target the links inside the list items directly */
+.discover-links-list li a {
+  font-size: 16px;
+  color: #666666;
+  text-decoration: none; /* Optional: removes the default underline if you want */
+  margin-bottom: 15px;
+}
+
+.discover-links-list li{
+  margin-bottom: 25px;
+}
+
+/* Container holding both Left Content and the Right Form */
+.form-container {
+  display: flex;
+  gap: 40px; /* Space between left side and right side */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- LEFT SIDE LAYOUT --- */
+.left-tabs {
+  flex: 1; /* Takes up 50% width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual information cards */
+.enroll-tab, .tab {
+  background-color: #f9f9f9; /* Light contrast background */
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Make the contact item blocks look like small horizontal rows */
+/* The main card container */
+.tab {
+  display: flex;
+  align-items: center; /* Vertically centers the image with the text block */
+  gap: 20px;           /* Puts clean horizontal space between the image and the text */
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Ensure the image doesn't shrink or stretch weirdly */
+.tab img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0; /* Prevents the image from getting squished if text is long */
+}
+
+/* The new inner container tracking the text stack */
+.tab-info {
+  display: flex;
+  flex-direction: column; /* Forces the text tags to stack on top of each other */
+  gap: 4px;               /* Controls the vertical spacing between text lines */
+}
+
+/* Optional: Reset default margins on headings inside the stack so spacing is consistent */
+.tab-info h3 {
+  margin: 0;
+}
+.tab-info p {
+  margin: 0;
+}
+.join{
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  height: 200px;
+  margin-bottom: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 30px rgb(255, 254, 254);
+}
+
+.join h2{
+  color: #333333;
+  font-weight: bold;
+}
+
+/* --- RIGHT SIDE LAYOUT --- */
+.right-tabs {
+  flex: 1; /* Takes up the other 50% width */
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow container */
+}
+
+.right-tabs form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-tabs label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.right-tabs input {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Crucial so padding doesn't overflow width */
+}
+
+.right-tabs button {
+  padding: 14px;
+  background-color: #111111;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.right-tabs button:hover {
+  background-color: #333333;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column; /* Stack left items and right form vertically on mobile screens */
+    gap: 30px;
+  }
+}
