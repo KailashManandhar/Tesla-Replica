@@ -4,16 +4,9 @@ export default function Popup(props) {
     const [selected, setSelected] = React.useState(true)
 
     function changeChosen(bool) {
-        if (selected) {
-            console.log("english selected")
-        }
-        else {
-            console.log("nepali selected")
-        }
-        if (bool != selected) {
+        if (bool !== selected) {
             setSelected(prev => !prev)
         }
-
     }
 
     return (
@@ -33,7 +26,7 @@ export default function Popup(props) {
                         <button onClick={props.onClick} className="close-btn">
                             Close
                         </button>
-                        <button onClick={props.onClick} className="close-btn">
+                        <button onClick={() => props.lang(selected)} className="close-btn">
                             Change
                         </button>
                     </div>

@@ -19,6 +19,20 @@ export default function Header(props) {
         setPopup(prev => !prev)
     }
 
+    function changeLanguage(bool) {
+
+        const targetLanguage = bool ? 'en' : 'ne';
+
+
+        const googleCombo = document.querySelector('.goog-te-combo');
+
+        if (googleCombo) {
+            googleCombo.value = targetLanguage; // Set the value
+            googleCombo.dispatchEvent(new Event('change')); // Force Google to translate
+        } else {
+            console.error("Google Translate script hasn't fully loaded on the page yet.");
+        }
+    }
 
 
     return (
@@ -66,7 +80,7 @@ export default function Header(props) {
                 />}
 
             </div>
-            {popup && <Popup onClick={handlePopUp} />}
+            {popup && <Popup onClick={handlePopUp} lang={changeLanguage} />}
         </header>
     );
 }
