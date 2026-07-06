@@ -820,3 +820,26 @@ button {
     gap: 30px;
   }
 }
+
+.shop-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.shop-grid img {
+  width: 200px;
+  height: auto;
+}
+
+.shop-grid li {
+  list-style-type: none;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

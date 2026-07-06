@@ -9,7 +9,7 @@ export default function VehiclesMenu(props) {
 
     return (
         <div className="mega-menu-content">
-            {keys.includes("img") ? (
+            {keys.includes("img") && !keys.includes("title") ? (
                 <>
                     <div className="cars-grid">
                         {props.data.map((data, index) => (
@@ -20,7 +20,7 @@ export default function VehiclesMenu(props) {
                                     <a href="#">Learn</a>
                                     <Link to={`/order/${data.name.replace(" ", "_")}`}>Order</Link>
                                 </div>
-                                </div>  
+                            </div>
                         ))}
                     </div>
 
@@ -32,16 +32,29 @@ export default function VehiclesMenu(props) {
                         ))}
                     </ul>
                 </>
-            ) : (
-                <ul className="discover-links-list">
-                    {props.data.map((item, index) => (
-                        <li key={index}>
-                            <Link to={item.to}>{item.name}</Link>
+            ) : keys.includes("title") ?
+                (<ul className="shop-grid">
+                    {props.data.map((item) => (
+
+                        <li>
+                            <h2>{item.title}</h2>
+                            <img src={item.img} alt="" />
                         </li>
+
+
                     ))}
-                </ul>
-            )}
+                </ul>)
+                :
+                (
+                    <ul className="discover-links-list">
+                        {props.data.map((item, index) => (
+                            <li key={index}>
+                                <Link to={item.to}>{item.name}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                )}
         </div>
-    );  
+    );
 }
 

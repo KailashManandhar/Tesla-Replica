@@ -32,7 +32,11 @@ export default {
         { name: "About Tesla", to: "/footer/aboutus" },
         { name: "Contact", to: "/footer/contact" },
         { name: "News", to: "/footer/news" }
+    ],
+    shop: [
+        { title: "About Tesla", img: ModelS },
+        { title: "Contact", img: SolarPanel },
+        { title: "News", img: Charging }
     ]
-
 
 }

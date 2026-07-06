@@ -57,6 +57,9 @@ export default function Header(props) {
                 {activeMenu === "discover" && <VehiclesMenu
                     data={menuData.discover}
                 />}
+                {activeMenu === "shop" && <VehiclesMenu
+                    data={menuData.shop}
+                />}
 
             </div>
         </header>
