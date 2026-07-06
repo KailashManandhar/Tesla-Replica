@@ -7,6 +7,7 @@ import menuData from "./MenuData"
 import VehiclesMenu from "./VehiclesMenu"; // Import your mega menu component
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "./../css/Header.css"
 
 export default function Header(props) {
     // 1. Centralized state to track which menu tray is currently open
@@ -19,10 +20,10 @@ export default function Header(props) {
     return (
         // Leaving the header element completely resets the state and closes the menu
         <header onMouseLeave={() => setActiveMenu(null)} className={props.trans ? "trans-navbar" : ""}>
-            <nav>
-
-                <img src={TeslaLogo} className="teslaLogo" alt="Tesla Logo" />
-
+            <div className="visible-nav-content">
+                <Link to="/" className="tesla-logo-container">
+                    <img src={TeslaLogo} className="teslaLogo" alt="Tesla Logo" />
+                </Link>
                 {/* 3. Render links dynamically using .map() */}
                 <div className="center-elements">
                     {navItems.map((item) => (
@@ -40,7 +41,7 @@ export default function Header(props) {
                     <a href="#"><img src={globeLogo} alt="Language/Region" /></a>
                     <a href="#"><img src={ProfileLogo} alt="Account Profile" /></a>
                 </div>
-            </nav>
+            </div>
 
             {/* 4. Dropdown tray container with sliding CSS transition class */}
             <div className={`dropdown-tray ${activeMenu ? "open" : ""}`}>

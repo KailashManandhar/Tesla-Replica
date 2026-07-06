@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    background-color: white;
+}
+
+.end-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-elements img {
+    width: 60px;
+    height: auto;
+}
+
+.visible-nav-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.center-elements {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+
+}
+
+/* Update this block in Header.css */
+header .center-elements h4 {
+    color: black;
+    cursor: pointer;
+}
+
+header.trans-navbar .center-elements h4 {
+    color: black;
+}
+
+.tesla-logo-container img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border: none;
+}
+
+.tesla-logo-container {
+    margin-left: 30px;
+    height: 56px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.trans-navbar {
+    position: fixed;
+    background-color: transparent;
+}

@@ -56,43 +56,6 @@ nav {
   /* Lock your solid color here */
 }
 
-.center-elements {
-  display: flex;
-  justify-content: space-between;
-  width: 489px;
-}
-
-.center-elements h4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-.center-elements h4:hover {
-  cursor: pointer;
-  background-color: #F2F2F2;
-}
-
-.teslaLogo {
-  max-height: 50%;
-  width: auto;
-
-  border: 2px solids;
-
-  margin-left: 40px;
-}
-
-.end-elements {
-  margin: 10px 30px;
-}
-
-.end-elements a img {
-  width: 40px;
-  height: 40px;
-}
 
 .home-image-container {
   height: 80vh;
@@ -141,7 +104,7 @@ nav {
 .selfDriving-container {
   background-color: #F4F4F4;
   width: 95vw;
-  height: 50vh;
+  height: 500px;
   margin: 40px 35px;
   border-radius: 10px;
   padding: 0;
@@ -167,12 +130,9 @@ nav {
   gap: 50px;
 }
 
-.selfDriving-text {
-  margin: 50px;
-}
 
 .selfDriving-buttons {
-  margin: 50px 1px;
+  margin: 30px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -220,7 +180,7 @@ nav {
 
 .card-text {
   position: absolute;
-  top: 400px;
+  top: 350px;
   left: 40px;
   right: 70px;
   bottom: 30px;
@@ -550,12 +510,7 @@ h5 {
   object-position: center;
 }
 
-header.trans-navbar {
-  background-color: transparent;
-  color: white;
-  position: absolute;
 
-}
 
 .fade-image-container {
   width: 100%;
@@ -740,7 +695,7 @@ button {
   gap: 20px;
 }
 
-/* Individual information cards */
+
 .enroll-tab,
 .tab {
   background-color: #f9f9f9;
