@@ -8,7 +8,7 @@ const Order = () => {
     const [data, setData] = React.useState(Data[item])
     const keys = Object.keys(data);
     const [active, setActive] = React.useState(keys[2])
-    const carList = ["Model_3", "Model_Y", "Cyber_Truck"]
+    const carList = ["Model_3", "Model_Y", "Cyber_Truck", "Model_X", "Model_S"]
     const otherList = ["Solar_Panels", "Powerwall", "MegaPack", "Solar_Roof",]
     console.log(active)
     function toggleClick(id) {

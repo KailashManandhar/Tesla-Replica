@@ -1,5 +1,7 @@
 import model3 from "./../assets/model3.png"
 import modely from "./../assets/modely.png"
+import models from "./../assets/models.png"
+import modelx from "./../assets/modelx.png"
 import cybertruck from "./../assets/cybertruck_nav.png"
 
 
@@ -88,5 +90,61 @@ export default {
       zeroToSixty: "2.6 sec"
     }
   },
-  
+  "Model_S": {
+    name: "Model S",
+    img: models,
+    "Rear-Wheel Drive": {
+      price: 36990,
+      range: "321 mi",
+      topSpeed: "125 mph",
+      zeroToSixty: "5.8 sec"
+    },
+    "Premium Rear-Wheel Drive": {
+      price: 42490,
+      range: "363 mi",
+      topSpeed: "125 mph",
+      zeroToSixty: "4.9 sec"
+    },
+    "Premium All-Wheel Drive": {
+      price: 47490,
+      range: "346 mi",
+      topSpeed: "125 mph",
+      zeroToSixty: "4.2 sec"
+    },
+    "Performance All-Wheel Drive": {
+      price: 54990,
+      range: "309 mi",
+      topSpeed: "163 mph",
+      zeroToSixty: "2.9 sec"
+    }
+  },
+  "Model_X": {
+    name: "Model X",
+    img: modelx,
+    "Rear-Wheel Drive": {
+      price: 36990,
+      range: "321 mi",
+      topSpeed: "125 mph",
+      zeroToSixty: "5.8 sec"
+    },
+    "Premium Rear-Wheel Drive": {
+      price: 42490,
+      range: "363 mi",
+      topSpeed: "125 mph",
+      zeroToSixty: "4.9 sec"
+    },
+    "Premium All-Wheel Drive": {
+      price: 47490,
+      range: "346 mi",
+      topSpeed: "125 mph",
+      zeroToSixty: "4.2 sec"
+    },
+    "Performance All-Wheel Drive": {
+      price: 54990,
+      range: "309 mi",
+      topSpeed: "163 mph",
+      zeroToSixty: "2.9 sec"
+    }
+  },
+
 }

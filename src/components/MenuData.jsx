@@ -11,28 +11,28 @@ import HomeCharging from "./../assets/home_charging.png"
 import SuperCharging from "./../assets/super_charging.png"
 
 export default {
-    vehicles : [
-        { name: "Model S", img: ModelS},
+    vehicles: [
+        { name: "Model S", img: ModelS },
         { name: "Model 3", img: Model3 },
         { name: "Model Y", img: ModelY },
         { name: "Model X", img: ModelX },
-        { name: "Cybertruck", img: Cybertruck }
+        { name: "Cyber Truck", img: Cybertruck }
     ],
-    energy : [
-        { name: "Solar Panel", img: SolarPanel},
-        { name: "Solar Roof", img: SolarRoof},
-        { name: "Power Wall", img: PowerWall}
+    energy: [
+        { name: "Solar Panel", img: SolarPanel },
+        { name: "Solar Roof", img: SolarRoof },
+        { name: "Power Wall", img: PowerWall }
     ],
-    charging : [
-        { name: "Charging", img: Charging},
-        { name: "Home Charging", img: HomeCharging},
-        { name: "Super Charging", img: SuperCharging}
+    charging: [
+        { name: "Charging", img: Charging },
+        { name: "Home Charging", img: HomeCharging },
+        { name: "Super Charging", img: SuperCharging }
     ],
     discover: [
-        { name: "About Tesla", to: "/footer/aboutus"},
-        { name: "Contact", to: "/footer/contact"},
-        { name: "News", to: "/footer/news"}
+        { name: "About Tesla", to: "/footer/aboutus" },
+        { name: "Contact", to: "/footer/contact" },
+        { name: "News", to: "/footer/news" }
     ]
-        
-    
+
+
 }
