@@ -1,43 +1,68 @@
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 
 }
+
 body::-webkit-scrollbar {
-  display: none; /* Chrome/Safari/Opera */
+  display: none;
+  /* Chrome/Safari/Opera */
 }
 
-button{
+button {
   cursor: pointer;
 }
-header{
+
+header {
   position: fixed;
-  display: flex;
-  background-color: white;
-  height: 56px;
-  z-index: 10;
   top: 0;
+  left: 0;
+  width: 100vw;
+  height: 56px;
+  display: block;
+  /* Changed from flex to block layout */
+  z-index: 100;
 }
-body{
+
+/* Base styles for the normal home navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 40px;
+  background-color: white;
+  /* Lock your solid color here */
+}
+
+/* Ensure your transparent header modifier still works properly */
+header.trans-navbar nav {
+  background-color: transparent;
+  color: white;
+}
+
+body {
   margin: 0;
 }
 
 
-nav{
-  
+nav {
   display: flex;
-  width: 100vw;
   justify-content: space-between;
-  background-color: white;
   align-items: center;
+  height: 56px;
+  padding: 0 40px;
+  background-color: white;
+  /* Lock your solid color here */
 }
 
-.center-elements{
+.center-elements {
   display: flex;
   justify-content: space-between;
   width: 489px;
 }
-.center-elements h4{
+
+.center-elements h4 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,34 +70,37 @@ nav{
   height: 30px;
   border-radius: 5px;
 }
-.center-elements h4:hover{
+
+.center-elements h4:hover {
   cursor: pointer;
   background-color: #F2F2F2;
 }
 
-.teslaLogo{ 
+.teslaLogo {
   max-height: 50%;
-  width:  auto;
- 
+  width: auto;
+
   border: 2px solids;
-  
+
   margin-left: 40px;
 }
 
-.end-elements{
+.end-elements {
   margin: 10px 30px;
 }
 
-.end-elements a img{
+.end-elements a img {
   width: 40px;
   height: 40px;
 }
+
 .home-image-container {
   height: 80vh;
   width: 100%;
-  position: relative; /* Crucial: establishes a bounding box for the absolute images */
+  position: relative;
+  /* Crucial: establishes a bounding box for the absolute images */
   cursor: pointer;
-  margin-top: 56px;
+  /* margin-top: 56px; */
 }
 
 /* Base style for both images */
@@ -83,10 +111,10 @@ nav{
   height: 100%;
   width: 100%;
   object-fit: cover;
-  
+
   /* The magic: hide by default and animate the opacity change */
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; 
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* The class that brings the current image into view */
@@ -94,10 +122,10 @@ nav{
   opacity: 1;
 }
 
-.home-image-container .image-text{
+.home-image-container .image-text {
   position: absolute;
   z-index: 10;
-  top: 50px;
+  /* top: 50px; */
   left: 0;
   right: 0;
   text-align: center;
@@ -106,11 +134,11 @@ nav{
   color: #F2F2F2;
 }
 
-.home-image-container .image-text.active{
+.home-image-container .image-text.active {
   opacity: 1;
 }
 
-.selfDriving-container{
+.selfDriving-container {
   background-color: #F4F4F4;
   width: 95vw;
   height: 50vh;
@@ -121,29 +149,29 @@ nav{
   justify-content: space-between;
 }
 
-.selfDriving-container video{
+.selfDriving-container video {
   width: 60%;
   height: auto;
 }
 
-.selfDriving-text{
+.selfDriving-text {
   margin: 50px;
   display: flex;
   flex-direction: column;
 }
 
-.selfDriving-text-subContainer{
+.selfDriving-text-subContainer {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 50px;
 }
 
-.selfDriving-text{
+.selfDriving-text {
   margin: 50px;
 }
 
-.selfDriving-buttons{
+.selfDriving-buttons {
   margin: 50px 1px;
   display: flex;
   align-items: center;
@@ -151,23 +179,24 @@ nav{
   gap: 20px;
 }
 
-.selfDriving-buttons button{
+.selfDriving-buttons button {
   width: 180px;
   height: 40px;
   border-radius: 5px;
   border: none;
 }
 
-.black-btn{
+.black-btn {
   background-color: black;
   color: white;
 }
-.white-btn{
+
+.white-btn {
   background-color: white;
   color: black;
 }
 
-.card-container{
+.card-container {
   display: flex;
   height: 590px;
   margin: 35px;
@@ -176,20 +205,20 @@ nav{
   gap: 20px;
 }
 
-.card{
+.card {
   position: relative;
 
 }
 
-.card img{
-  width: 1100px ;
+.card img {
+  width: 1100px;
   height: 560px;
   object-fit: cover;
   border-radius: 10px;
-  
+
 }
 
-.card-text{
+.card-text {
   position: absolute;
   top: 400px;
   left: 40px;
@@ -198,44 +227,46 @@ nav{
   color: white;
 }
 
-.carName{
+.carName {
   font-size: 45px;
   margin: 0;
 }
-.btn-grp{
+
+.btn-grp {
   display: flex;
   gap: 10px;
 }
 
-.btn-grp button{
+.btn-grp button {
   width: 150px;
   border: none;
   height: 40px;
   border-radius: 5px;
 }
-.blue-btn{
+
+.blue-btn {
   background-color: #3E6AE1;
   color: white;
 }
 
-.btn-grp button:hover{
+.btn-grp button:hover {
   filter: brightness(.9);
 }
 
-.learnMore-btn{
+.learnMore-btn {
   background-color: white;
   color: black;
 }
 
-.offers-cotainer{
+.offers-cotainer {
   display: flex;
   margin: 20px 30px;
-  
-  
+
+
   background-color: white;
 }
 
-.offer-card{
+.offer-card {
   display: flex;
   background-color: #F4F4F4;
   margin-right: 20px;
@@ -244,18 +275,18 @@ nav{
   border-radius: 5px;
 }
 
-.offer-card img{
+.offer-card img {
   height: 250px;
   width: auto;
   object-fit: cover;
 }
 
-.map-container{
+.map-container {
   margin: 30px 30px;
   border-radius: 10px;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,7 +294,7 @@ footer{
   gap: 30px;
 }
 
-footer button{
+footer button {
   border: none;
   background-color: white;
   color: rgb(92, 94, 98);
@@ -271,26 +302,18 @@ footer button{
   cursor: pointer;
 }
 
-.hoverIn{
+.hoverIn {
   background-color: #3E6AE1;
 }
 
-.hoverOut{
+.hoverOut {
   background-color: aquamarine;
 }
 
-/* Header container needs relative position to absolute anchor the tray */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  background-color: white;
-  z-index: 100;
-}
+
 
 /* The actual navbar dimensions */
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -302,12 +325,13 @@ nav{
 /* Dropdown Container Tray */
 .dropdown-tray {
   position: absolute;
-  top: 56px; /* Sits perfectly right under the navbar */
+  top: 56px;
+  /* Sits perfectly right under the navbar */
   left: 0;
   width: 100vw;
   background-color: white;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-  
+
   /* Slide & fade transitions */
   max-height: 0;
   overflow: hidden;
@@ -317,7 +341,8 @@ nav{
 
 /* When active menu matches state */
 .dropdown-tray.open {
-  max-height: 500px; /* Adjust to fit content depth */
+  max-height: 500px;
+  /* Adjust to fit content depth */
   opacity: 1;
 }
 
@@ -331,7 +356,8 @@ nav{
 
 .cars-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 items wide */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 items wide */
   gap: 30px;
   flex: 3;
 }
@@ -383,21 +409,21 @@ nav{
   text-decoration: underline;
 }
 
-.order-car-container{
+.order-car-container {
   margin: 100px 30px;
   display: flex;
   height: 100%;
   justify-content: space-between;
-  
+
 }
 
-.order-car-container img{
+.order-car-container img {
   height: 70vh;
   width: auto;
   position: fixed;
 }
 
-.left-order-container{
+.left-order-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -405,30 +431,31 @@ nav{
   margin-right: 130px;
 }
 
-.stats{
+.stats {
   display: flex;
   /* border: 2px solid; */
 }
 
-.stat{
+.stat {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  
+
 }
 
-.stat h3, h5{
+.stat h3,
+h5 {
   margin: 0 5px;
 }
 
-.stat h5{
+.stat h5 {
   font-size: 10px;
   color: rgb(57, 60, 65);
 }
 
-.wheel-drive{
+.wheel-drive {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -439,59 +466,59 @@ nav{
   border-radius: 5px;
 }
 
-.wheel-drive.active{
+.wheel-drive.active {
   background-color: #F2F2F2;
   border: 2px solid;
 }
 
-#cyber-logo{
+#cyber-logo {
   width: 170px;
   height: 58px;
-  
+
 }
 
-.contact-container{
+.contact-container {
   margin: 200px 300px 50px;
-  
+
 }
 
-.left-contact{
+.left-contact {
   width: 600px;
   display: flex;
   flex-direction: column;
 }
 
-.contact-subHeading{
+.contact-subHeading {
   font-size: 14px;
   font-weight: bold;
 }
 
-.contact-sm-txt{
+.contact-sm-txt {
   font-size: 14px;
   color: #393C41;
 }
 
-.info-txt{
+.info-txt {
   display: flex;
   gap: 20px;
 }
 
-.location-container{
+.location-container {
   display: grid;
   grid-template-columns: max-content max-content;
   gap: 20px;
 }
 
-.location{
+.location {
   width: 450px;
   height: 350px;
   padding: 0;
-  
+
   /* border: 2px solid; */
   overflow: hidden;
 }
 
-.location img{
+.location img {
   height: 50%;
   width: 100%;
   object-fit: cover;
@@ -499,70 +526,72 @@ nav{
   border-radius: 10px;
 }
 
-.banner{
+.banner {
   width: 100%;
   height: 50%;
 }
 
-.blog-block{
+.blog-block {
   width: 700px;
   margin: 50px 500px 0 300px;
   height: 200px;
   /* border: 2px solid; */
 }
 
-.about-us-container{
+.about-us-container {
   margin: 0;
   padding: 0;
 }
 
-.about-us-container video{
- width: 100vw;
+.about-us-container video {
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   object-position: center;
 }
 
-header.trans-navbar{
+header.trans-navbar {
   background-color: transparent;
   color: white;
   position: absolute;
-  
+
 }
 
 .fade-image-container {
   width: 100%;
-  height: 500px; 
-  
-  background-image: 
+  height: 500px;
+
+  background-image:
     /* 1. Top White Fade (Kept exactly as you liked it) */
     linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-    
+
     /* 2. Enhanced Bottom Dark Fade */
     linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 60%),
-    
+
     url('./assets/fading_image.png');
-    
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.random-txt{
+.random-txt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 130px 400px;
-  
-}
-
-.random-txt h1,p,button{
-  margin-top: 20px ;
 
 }
 
-.random-txt button{
+.random-txt h1,
+p,
+button {
+  margin-top: 20px;
+
+}
+
+.random-txt button {
   background-color: white;
   padding: 10px 60px;
   border: 3px solid black;
@@ -570,19 +599,19 @@ header.trans-navbar{
   border-radius: 5px;
 }
 
-.random-txt button:hover{
+.random-txt button:hover {
   background-color: black;
   color: white;
-  
+
 }
 
-.black-background-container{
+.black-background-container {
   width: 100%;
   background-color: black;
   height: auto;
 }
 
-.leftTitle_rightText{
+.leftTitle_rightText {
   margin: 0 250px 50px;
   color: white;
   /* border: 2px solid white; */
@@ -590,19 +619,19 @@ header.trans-navbar{
   justify-content: space-between;
 }
 
-.leftTitle_rightText p{
+.leftTitle_rightText p {
   width: 700px;
 }
 
-.changing-img{
- margin: 0 250px 20px;
- position: relative;
- overflow: hidden;
- height: 400px;
- width: 1100px;
+.changing-img {
+  margin: 0 250px 20px;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  width: 1100px;
 }
 
-.changing-img img{
+.changing-img img {
   position: absolute;
   opacity: 0;
   width: 100%;
@@ -611,21 +640,21 @@ header.trans-navbar{
   border-radius: 5px;
 }
 
-.changing-img img.active{
+.changing-img img.active {
   opacity: 1;
 }
 
-.clicking-container{
+.clicking-container {
   width: 900px;
   height: 100px;
   margin: 20px 350px 50px;
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.clicker{
+.clicker {
   width: 250px;
   height: 100px;
   border-top: 2px solid #666666;
@@ -634,23 +663,23 @@ header.trans-navbar{
   color: #666666;
 }
 
-.clicker.active{
+.clicker.active {
   color: white;
   border-top: 2px solid white;
 }
 
 
-.aboutus-img{
+.aboutus-img {
   height: 85vh;
   width: 1100px;
   border-radius: 5px;
   object-fit: cover;
- margin: 0 250px 20px;
+  margin: 0 250px 20px;
 
 }
 
 
-.bottom-btn{
+.bottom-btn {
   background-color: black;
   padding: 10px 60px;
   border: 3px solid white;
@@ -659,10 +688,10 @@ header.trans-navbar{
   margin-bottom: 100px;
 }
 
-.bottom-btn:hover{
+.bottom-btn:hover {
   background-color: white;
   color: black;
-  
+
 }
 
 /* 1. Add the dot here */
@@ -673,26 +702,30 @@ header.trans-navbar{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  list-style: none; /* Optional: removes the default bullet points */
-  padding: 0;       /* Optional: clears out default list indentation */
+  list-style: none;
+  /* Optional: removes the default bullet points */
+  padding: 0;
+  /* Optional: clears out default list indentation */
 }
 
 /* 2. Target the links inside the list items directly */
 .discover-links-list li a {
   font-size: 16px;
   color: #666666;
-  text-decoration: none; /* Optional: removes the default underline if you want */
+  text-decoration: none;
+  /* Optional: removes the default underline if you want */
   margin-bottom: 15px;
 }
 
-.discover-links-list li{
+.discover-links-list li {
   margin-bottom: 25px;
 }
 
 /* Container holding both Left Content and the Right Form */
 .form-container {
   display: flex;
-  gap: 40px; /* Space between left side and right side */
+  gap: 40px;
+  /* Space between left side and right side */
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -700,15 +733,18 @@ header.trans-navbar{
 
 /* --- LEFT SIDE LAYOUT --- */
 .left-tabs {
-  flex: 1; /* Takes up 50% width */
+  flex: 1;
+  /* Takes up 50% width */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 /* Individual information cards */
-.enroll-tab, .tab {
-  background-color: #f9f9f9; /* Light contrast background */
+.enroll-tab,
+.tab {
+  background-color: #f9f9f9;
+  /* Light contrast background */
   padding: 24px;
   border-radius: 8px;
   border: 1px solid #e5e5e5;
@@ -718,8 +754,10 @@ header.trans-navbar{
 /* The main card container */
 .tab {
   display: flex;
-  align-items: center; /* Vertically centers the image with the text block */
-  gap: 20px;           /* Puts clean horizontal space between the image and the text */
+  align-items: center;
+  /* Vertically centers the image with the text block */
+  gap: 20px;
+  /* Puts clean horizontal space between the image and the text */
   padding: 24px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -730,24 +768,29 @@ header.trans-navbar{
 .tab img {
   width: 32px;
   height: 32px;
-  flex-shrink: 0; /* Prevents the image from getting squished if text is long */
+  flex-shrink: 0;
+  /* Prevents the image from getting squished if text is long */
 }
 
 /* The new inner container tracking the text stack */
 .tab-info {
   display: flex;
-  flex-direction: column; /* Forces the text tags to stack on top of each other */
-  gap: 4px;               /* Controls the vertical spacing between text lines */
+  flex-direction: column;
+  /* Forces the text tags to stack on top of each other */
+  gap: 4px;
+  /* Controls the vertical spacing between text lines */
 }
 
 /* Optional: Reset default margins on headings inside the stack so spacing is consistent */
 .tab-info h3 {
   margin: 0;
 }
+
 .tab-info p {
   margin: 0;
 }
-.join{
+
+.join {
   width: 100%;
   border-radius: 10px;
   background-color: white;
@@ -759,18 +802,20 @@ header.trans-navbar{
   box-shadow: 5px 10px 30px rgb(255, 254, 254);
 }
 
-.join h2{
+.join h2 {
   color: #333333;
   font-weight: bold;
 }
 
 /* --- RIGHT SIDE LAYOUT --- */
 .right-tabs {
-  flex: 1; /* Takes up the other 50% width */
+  flex: 1;
+  /* Takes up the other 50% width */
   background-color: #ffffff;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow container */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow container */
 }
 
 .right-tabs form {
@@ -793,7 +838,8 @@ header.trans-navbar{
   border-radius: 4px;
   font-size: 16px;
   width: 100%;
-  box-sizing: border-box; /* Crucial so padding doesn't overflow width */
+  box-sizing: border-box;
+  /* Crucial so padding doesn't overflow width */
 }
 
 .right-tabs button {
@@ -814,7 +860,8 @@ header.trans-navbar{
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
   .form-container {
-    flex-direction: column; /* Stack left items and right form vertically on mobile screens */
+    flex-direction: column;
+    /* Stack left items and right form vertically on mobile screens */
     gap: 30px;
   }
 }
