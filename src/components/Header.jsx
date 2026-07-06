@@ -8,14 +8,18 @@ import VehiclesMenu from "./VehiclesMenu"; // Import your mega menu component
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./../css/Header.css"
-
+import Popup from "./Popup";
 export default function Header(props) {
     // 1. Centralized state to track which menu tray is currently open
     const [activeMenu, setActiveMenu] = React.useState(null);
-
+    const [popup, setPopup] = React.useState(false)
     // 2. Data array representing your navigation links
     const navItems = ["Vehicles", "Energy", "Charging", "Discover", "Shop"];
-    console.log(props.trans)
+    function handlePopUp() {
+        setPopup(prev => !prev)
+    }
+
+
 
     return (
         // Leaving the header element completely resets the state and closes the menu
@@ -38,7 +42,7 @@ export default function Header(props) {
 
                 <div className="end-elements">
                     <a href="#"><img src={supportLogo} alt="Support" /></a>
-                    <a href="#"><img src={globeLogo} alt="Language/Region" /></a>
+                    <a href="#" onClick={handlePopUp}><img src={globeLogo} alt="Language/Region" /></a>
                     <a href="#"><img src={ProfileLogo} alt="Account Profile" /></a>
                 </div>
             </div>
@@ -62,6 +66,7 @@ export default function Header(props) {
                 />}
 
             </div>
+            {popup && <Popup onClick={handlePopUp} />}
         </header>
     );
 }

@@ -843,3 +843,85 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+/* Dark blurred background overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semitransparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Keeps it on top of all other elements */
+}
+
+/* The actual white box in the center */
+.popup-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  min-width: 300px;
+  animation: fadeIn 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional subtle entry animation */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.choose-language {
+  display: flex;
+  width: 90%;
+  height: 100px;
+  margin: 0;
+
+}
+
+.eng,
+.nep {
+  width: 50%;
+  height: 70%;
+  color: #393C41;
+  padding: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.353);
+  cursor: pointer;
+
+}
+
+.eng.chosen,
+.nep.chosen {
+  color: black;
+  border-bottom: 4px solid black;
+}
+
+.close-btn {
+  color: white;
+  background-color: #333333;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.lang-btn-grp {
+  display: flex;
+  gap: 20px
+}
